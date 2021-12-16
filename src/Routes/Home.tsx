@@ -129,6 +129,7 @@ function Home() {
                 autoComplete="off"
               />
               <TextInput
+                rows={6}
                 autoFocus
                 required
                 placeholder="내용 작성..."
@@ -140,7 +141,7 @@ function Home() {
                 })}
               />
               <FormBottom>
-                <OverlayBtn>제출</OverlayBtn>
+                <OverlayBtn>저장하기</OverlayBtn>
               </FormBottom>
             </OverlayForm>
             <Overlay
