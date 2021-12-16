@@ -1,13 +1,17 @@
 import styled from "styled-components";
 import { useForm } from "react-hook-form";
+import { useSetRecoilState } from "recoil";
+import { sidebarState } from "../atoms";
 
 const Container = styled.header`
+  z-index: 2;
   height: 64px;
   width: 100vw;
   position: fixed;
   top: 0;
   border-bottom: solid 1px ${(props) => props.theme.bgColor.subBg};
   color: ${(props) => props.theme.textColor.defaultText};
+  background-color: ${(props) => props.theme.bgColor.mainBg};
 `;
 const Wrapper = styled.div`
   padding: 0 22px;
@@ -82,18 +86,23 @@ const SettingBtn = styled.button`
   font-size: 24px;
 `;
 
-interface IForm {
+interface ISearchForm {
   search: string;
 }
 
 function Header() {
-  const { register, handleSubmit, setValue } = useForm<IForm>();
+  const setSidebar = useSetRecoilState(sidebarState);
+  const { register, handleSubmit, setValue } = useForm<ISearchForm>();
   const onSearchValid = () => setValue("search", "");
+  const toggleSidebar = () => setSidebar((current) => !current);
   return (
     <Container>
       <Wrapper>
         <HeaderLeft>
-          <SideMenuBtn className="xi-bars"></SideMenuBtn>
+          <SideMenuBtn
+            onClick={toggleSidebar}
+            className="xi-bars"
+          ></SideMenuBtn>
           <Logo>
             <img
               src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Google_Keep_icon_%282020%29.svg/1489px-Google_Keep_icon_%282020%29.svg.png"

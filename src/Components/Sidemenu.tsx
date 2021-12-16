@@ -32,28 +32,30 @@ const List = styled(motion.li)`
 
 function Sidemenu() {
   return (
-    <Container>
-      <Lists>
-        <List style={{ backgroundColor: "#FEEFC3" }}>
-          <i className="xi-lightbulb-o"></i>
-          <span>메모</span>
-        </List>
-        <List
-          whileHover={{ backgroundColor: "rgba(241, 243, 244, 1)" }}
-          transition={{ duration: 0.2 }}
-        >
-          <i className="xi-star-o"></i>
-          <span>중요</span>
-        </List>
-        <List
-          whileHover={{ backgroundColor: "rgba(241, 243, 244, 1)" }}
-          transition={{ duration: 0.2 }}
-        >
-          <i className="xi-trash-o"></i>
-          <span>휴지통</span>
-        </List>
-      </Lists>
-    </Container>
+    <>
+      <Container>
+        <Lists>
+          <List style={{ backgroundColor: "#FEEFC3" }}>
+            <i className="xi-lightbulb-o"></i>
+            <span>메모</span>
+          </List>
+          <List
+            whileHover={{ backgroundColor: "rgba(241, 243, 244, 1)" }}
+            transition={{ duration: 0.2 }}
+          >
+            <i className="xi-star-o"></i>
+            <span>중요</span>
+          </List>
+          <List
+            whileHover={{ backgroundColor: "rgba(241, 243, 244, 1)" }}
+            transition={{ duration: 0.2 }}
+          >
+            <i className="xi-trash-o"></i>
+            <span>휴지통</span>
+          </List>
+        </Lists>
+      </Container>
+    </>
   );
 }
 

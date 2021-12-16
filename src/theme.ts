@@ -7,7 +7,7 @@ export const lightTheme: DefaultTheme = {
     inactiveText: "#b2bec3",
   },
   bgColor: {
-    mainBg: "#fffff",
+    mainBg: "#fff",
     subBg: "#F1F3F4",
   },
   accentColor: "#FEEFC3",
