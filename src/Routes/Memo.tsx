@@ -29,10 +29,11 @@ const Title = styled.h2`
 const Text = styled.h3`
   font-size: 18px;
   padding: 20px;
+  white-space: pre;
 `;
 const Cat = styled.p`
   margin: 12px;
-  margin-top: 30px;
+  margin-top: 10px;
   border-radius: 16px;
   padding: 4px 12px;
   background-color: rgba(255, 255, 255, 0.8);
